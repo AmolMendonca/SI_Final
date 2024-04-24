@@ -137,6 +137,10 @@ async function execute(input) {
       }
   }
 
+  else if(parts[0] == "move" || parts[0] == "cd") {
+    printToTerminal(" ");
+  }
+
   else if (!COMMANDS.hasOwnProperty(input)) {
     printToTerminal(`no such command: "${input}"`);
   } 
@@ -245,7 +249,7 @@ const COMMANDS = {
   education: "[amolmendonca] ~ $ Bachelors of Science in Computer Science @ University of Michigan - Ann Arbor",
   experience: "[amolmendonca] ~ $ I'm currently working on a startup - MediGate, with 2 of my best friends. Would love to chat if you're interested in learning more!",
   contact: '[amolmendonca] ~ $ You can contact me on: amolm@umich.edu or (248)-832-3029',
-  play: 'Starting Tic-Tac-Toe... Type "move <cell-number>" to make a move (e.g., "move 1")',
-  resume: 'hint: cd <span class = "directory">amol/docs/resume</span>',
-  clear: 'Clears the terminal.'
+  play: 'moves available (1 to 8)',
+  resume: 'hint: <span class = "hack">cd</span> <span class = "directory">amol/docs/resume</span>',
+  clear: 'Clears the terminal.',
 };
